@@ -51,7 +51,7 @@ FIXED_CHILDREN = [
 def generate_simple_children():
     """Генерирует простых случайных детей"""
     # 30% шанс отсутствия детей
-    if random.random() < 0.3:
+    if random.random() < 0:
         return []
     
     # От 1 до 3 детей
@@ -131,3 +131,4 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5003))
     print(f"🚀 Запуск Child Service на порту {port}")
     app.run(debug=False, host='0.0.0.0', port=port)
+
